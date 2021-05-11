@@ -5,18 +5,18 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
 
         {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
+            {{ encore_entry_link_tags('app') }}
         {% endblock %}
 
 
 
         {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
+            {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
     <body>
 
-    <nav>Mon menu</nav>
+    <nav class="text-black-50">Mon menu</nav>
 
     {% for label, messages in app.flashes %}
         {% for message in messages %}
