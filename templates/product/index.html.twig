@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ProductController!{% endblock %}
+{% block title %}Welcome ...{% endblock %}
 
 {% block body %}
 
@@ -15,7 +15,10 @@
     {% for product in products %}
 
         <li>{{ product.name }} à {{ product.price }}€
-            <a href="{{ path("product_all",{id:product.id})  }}">voir le produit</a></li>
+            <a href="{{ path("product_update",{id:product.id})  }}">modifier le produit</a>
+
+            <a href="{{ path("product_delete",{id:product.id})  }}">supprimer le produit</a>
+        </li>
     {% endfor %}
 
 {% endblock %}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
@@ -10,17 +10,17 @@
 
 
 
+
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
     <body>
 
-    <nav class="text-black-50">Mon menu</nav>
-
+    {% include "_parts/menu.html.twig" %}
     {% for label, messages in app.flashes %}
         {% for message in messages %}
-            <div class="flash-{{ label }}">
+            <div class="alert alert-{{ label }}">
                 {{ message }}
             </div>
         {% endfor %}

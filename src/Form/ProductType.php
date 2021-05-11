@@ -18,7 +18,9 @@ class ProductType extends AbstractType
             ->add('description')
             ->add('price', null, ["label"=>"Prix"] )
             ->add('available')
-            ->add("submit", SubmitType::class )
+            ->add("categorie")
+            ->add("colors",null, ["required"=>false])
+            ->add("Envoyer", SubmitType::class )
         ;
     }
 
