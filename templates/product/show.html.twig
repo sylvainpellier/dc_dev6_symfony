@@ -1,1 +1,12 @@
-asddsqd
+{% extends 'base.html.twig' %}
+
+{% block title %}Fiche {{ product.name }}{% endblock %}
+
+{% block body %}
+
+    <h1>{{ product.name }} / {{ product.price }}</h1>
+
+
+    <p>{{ product.description }}</p>
+
+{% endblock %}

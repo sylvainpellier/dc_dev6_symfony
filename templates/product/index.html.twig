@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProductController!{% endblock %}
+
+{% block body %}
+
+    {{ dump(products) }}
+
+    <h1>Liste des produits</h1>
+
+    {% if products|length == 0 %}
+        <p>Aucun produit</p>
+    {% endif %}
+
+    {% for product in products %}
+
+        <li>{{ product.name }} à {{ product.price }}€
+            <a href="{{ path("product_all",{id:product.id})  }}">voir le produit</a></li>
+    {% endfor %}
+
+{% endblock %}
