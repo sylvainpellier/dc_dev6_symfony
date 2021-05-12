@@ -17,7 +17,7 @@ use Symfony\Component\Routing\Annotation\Route;
  * @Route("/products", name="product_")
  */
 
-class ProductController extends AbstractController
+class ProductController extends OverrideAbstractController
 {
     /**
      * @Route("/all", name="all")
@@ -118,6 +118,8 @@ class ProductController extends AbstractController
         $idColor = $request->request->get("color_id");
 
         $color = $colorRepository->find($idColor);
+
+        $colorRepository->
 
         $product->addColor($color);
 

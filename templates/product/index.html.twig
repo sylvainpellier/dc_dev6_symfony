@@ -16,6 +16,7 @@
 
         <li>{{ product.name }} à {{ product.price }}€
             <a href="{{ path("product_update",{id:product.id})  }}">modifier le produit</a>
+            <a href="{{ path("cart_add_product",{idProduct:product.id})  }}">ajouter le produit au panier</a>
 
             <a href="{{ path("product_delete",{id:product.id})  }}">supprimer le produit</a>
         </li>

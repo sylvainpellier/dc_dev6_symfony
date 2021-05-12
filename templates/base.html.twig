@@ -17,6 +17,18 @@
     </head>
     <body>
 
+    <div style="float:right">
+
+        Panier contient : {{ nbCartProduct }} produits
+
+        <ul>
+            {% for product in productsInCart %}
+                <li>{{ product.name }}</li>
+            {% endfor %}
+        </ul>
+
+    </div>
+
     {% include "_parts/menu.html.twig" %}
     {% for label, messages in app.flashes %}
         {% for message in messages %}

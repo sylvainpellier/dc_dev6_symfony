@@ -1,0 +1,20 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    {{ controller_name }}
+
+    <p>{{ test }}</p>
+
+    {% if test > 10  %}
+        <p>ok</p>
+    {% endif %}
+    <ul>
+        {% for tab in tabs  %}
+
+            <li>{{ tab }}</li>
+
+        {% endfor %}
+    </ul>
+
+{% endblock%}
